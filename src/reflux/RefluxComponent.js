@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { ListenerMixin } from 'reflux';
 import reactMixin from 'react-mixin';
 import RefluxStore from './RefluxStore';
 import Counter from '../common/Counter';
 
-class RefluxComponent extends Component {
+/**
+ * display a counter that has been sync with the reflux store
+ *
+ * @param {string} updatedby
+ * @param {number} counter
+ */
+class RefluxComponent extends PureComponent {
   constructor(props) {
     super(props);
 

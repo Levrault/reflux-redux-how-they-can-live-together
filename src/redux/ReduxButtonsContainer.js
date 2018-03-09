@@ -17,6 +17,14 @@ const ButtonsWrapper = styled.div`
 
 const mapStateToProps = ({ counter }) => ({ counter });
 
+/**
+ * Call redux store action
+ *
+ * @param {number}   counter
+ * @param {function} onIncrement
+ * @param {function} onDecrement
+ * @param {function} onReset
+ */
 const ButtonsContainer = ({
   counter,
   onIncrement,

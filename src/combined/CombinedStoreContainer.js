@@ -6,6 +6,20 @@ import { sync } from '../redux/ReduxActions';
 
 const mapStateToProps = state => ({ state });
 
+/**
+ * Combined container is used to sync all redux data
+ * to the CombinedStore.
+ *
+ * I need the complete reduce sync to create a generic
+ * CombinedStore component. I can trigger the good store data
+ * based on the reflux store passed has data.
+ *
+ * @param {object}    state
+ * @param {function}  reduxSync
+ * @param {object}    reflux
+ * @param {string}    tag
+ * @param {object}    options
+ */
 const CombinedContainer = ({
   state,
   reduxSync,

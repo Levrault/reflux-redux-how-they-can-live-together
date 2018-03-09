@@ -19,6 +19,13 @@ const Value = styled.span`
   color: #0984e3;
 `;
 
+/**
+ * Simple counter
+ *
+ * @param {string} color
+ * @param {string} updatedBy which store has send the counter value
+ * @param {number} counter
+ */
 const Counter = ({ color, updatedBy, counter }) => (
   <Wrapper>
     <Name color={color}>{updatedBy}</Name>

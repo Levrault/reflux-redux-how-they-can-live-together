@@ -10,6 +10,12 @@ const mapStateToProps = ({ updatedBy, counter }) => (
   }
 );
 
+/**
+ * display a counter that has been sync with the redux store
+ *
+ * @param {string} updatedby
+ * @param {number} counter
+ */
 const Container = ({ updatedBy, counter }) => (
   <div>
     <Counter color="#00cec9" updatedBy={updatedBy} counter={counter} />

@@ -16,6 +16,12 @@ class RefluxStore extends Store {
     this.setState(state);
   }
 
+  /**
+   * Increment and update reflux's counter value
+   * @param  {string} updatedBy
+   * @param  {number} counter
+   * @return {object}
+   */
   onIncrement = () => {
     const counter = this.state.counter + 1;
     this.setState({
@@ -24,6 +30,12 @@ class RefluxStore extends Store {
     });
   }
 
+  /**
+   * Decrement and update reflux's counter value
+   * @param  {string} updatedBy
+   * @param  {number} counter
+   * @return {object}
+   */
   onDecrement = () => {
     const counter = this.state.counter - 1;
     this.setState({
@@ -32,6 +44,10 @@ class RefluxStore extends Store {
     });
   }
 
+  /**
+   * Reset counter to 0
+   * @return {object}
+   */
   onReset = () => {
     this.setState({ counter: 0 });
   }

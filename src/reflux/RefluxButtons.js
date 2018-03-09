@@ -13,6 +13,14 @@ const ButtonsWrapper = styled.div`
   flex-direction: column;
 `;
 
+/**
+ * Call reflux store action
+ *
+ * @param {number}   counter
+ * @param {function} onIncrement
+ * @param {function} onDecrement
+ * @param {function} onReset
+ */
 const RefluxButtons = () => (
   <Wrapper>
     <Title color="#db7093">Reflux Actions</Title>
