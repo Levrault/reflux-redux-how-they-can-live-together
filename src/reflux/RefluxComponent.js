@@ -24,7 +24,7 @@ class RefluxComponent extends Component {
     return (
       <div>
         <strong>ReduxComponent</strong>
-        <Counter color="#d63031" name={updatedBy} value={counter} />
+        <Counter color="#db7093" name={updatedBy} value={counter} />
       </div>
     );
   }

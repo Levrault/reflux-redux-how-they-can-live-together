@@ -24,6 +24,14 @@ class RefluxStore extends Store {
     });
   }
 
+  onDecrement = () => {
+    const counter = this.state.counter - 1;
+    this.setState({
+      updatedBy: 'Reflux',
+      counter,
+    });
+  }
+
   onReset = () => {
     this.setState({ counter: 0 });
   }

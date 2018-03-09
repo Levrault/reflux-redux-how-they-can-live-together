@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import RefluxComponent from './reflux/RefluxComponent';
-import RefluxButton from './reflux/RefluxButton';
+import RefluxButtons from './reflux/RefluxButtons';
+import ReduxContainer from './redux/ReduxContainer';
+import ReduxButtonsContainer from './redux/ReduxButtonsContainer';
 
 const Wrapper = styled.div`
   width: 600px;
@@ -26,8 +28,10 @@ class Mock extends Component {
       <Wrapper>
         <h1>Mock</h1>
         <RefluxComponent />
+        <ReduxContainer />
         <ButtonWrapper>
-          <RefluxButton />
+          <RefluxButtons />
+          <ReduxButtonsContainer />
         </ButtonWrapper>
       </Wrapper>
     );
