@@ -5,7 +5,7 @@ const initialState = {
   counter: 0,
 };
 
-const Reducer = (state = initialState, action) => {
+export default function ReduxReducer(state = initialState, action) {
   switch (action.type) {
     case INCREMENT:
       return { ...state, counter: action.payload };
@@ -16,6 +16,4 @@ const Reducer = (state = initialState, action) => {
     default:
       return state;
   }
-};
-
-export default Reducer;
+}

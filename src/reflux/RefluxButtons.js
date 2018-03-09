@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import RefluxActions from './RefluxActions';
 
 const Wrapper = styled.div`
+  margin: 2em;
+`;
+
+const ButtonsWrapper = styled.div`
   display:flex;
   flex-direction: column;
 `;
@@ -10,24 +14,24 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
-  color: palevioletred;
+  color: #db7093;
 `;
 
 const Button = styled.button`
   background: transparent;
   flex:1;
-  color: palevioletred;
+  color: #db7093;
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
-  border: 2px solid palevioletred;
+  border: 2px solid #db7093;
   border-radius: 3px;
 `;
 
 const RefluxButtons = () => (
-  <div>
+  <Wrapper>
     <Title>Reflux Actions</Title>
-    <Wrapper>
+    <ButtonsWrapper>
       <Button onClick={() => { RefluxActions.onIncrement(); }}>
           Increment
       </Button>
@@ -37,8 +41,8 @@ const RefluxButtons = () => (
       <Button onClick={() => { RefluxActions.onReset(); }}>
           Reset
       </Button>
-    </Wrapper>
-  </div>
+    </ButtonsWrapper>
+  </Wrapper>
 );
 
 export default RefluxButtons;
