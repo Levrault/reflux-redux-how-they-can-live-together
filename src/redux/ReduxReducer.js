@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET } from './ReduxConstant';
+import { INCREMENT, DECREMENT, RESET, SYNC } from './ReduxConstant';
 
 const initialState = {
   updatedBy: 'Redux',
@@ -11,6 +11,8 @@ export default function ReduxReducer(state = initialState, action) {
       return { ...state, counter: action.payload };
     case DECREMENT:
       return { ...state, counter: action.payload };
+    case SYNC:
+      return { ...state, ...action.payload };
     case RESET:
       return initialState;
     default:

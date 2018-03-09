@@ -1,7 +1,7 @@
 import Reflux from 'reflux';
 
 const RefluxActions = Reflux.createActions([
-  'statusUpdate',
+  'onSync',
   'onIncrement',
   'onDecrement',
   'onReset',

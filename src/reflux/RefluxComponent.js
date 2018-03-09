@@ -23,7 +23,7 @@ class RefluxComponent extends Component {
     const { updatedBy, counter } = this.state;
     return (
       <div>
-        <Counter color="#db7093" name={updatedBy} value={counter} />
+        <Counter color="#db7093" updatedBy={updatedBy} counter={counter} />
       </div>
     );
   }
