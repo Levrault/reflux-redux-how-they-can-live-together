@@ -9,9 +9,7 @@ const Wrapper = styled.div`
   flex-direction: row;
 `;
 
-const Name = styled.span.attrs({
-  color: props => props.color,
-})`
+const Name = styled.span`
   font-weight: 700;
   margin-right: 8px;
   color: ${props => props.color}
@@ -21,17 +19,17 @@ const Value = styled.span`
   color: #0984e3;
 `;
 
-const Counter = ({ color, name, value }) => (
+const Counter = ({ color, updatedBy, counter }) => (
   <Wrapper>
-    <Name color={color}>{name}</Name>
-    <Value>{value}</Value>
+    <Name color={color}>{updatedBy}</Name>
+    <Value>{counter}</Value>
   </Wrapper>
 );
 
 Counter.propTypes = {
   color: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
+  updatedBy: PropTypes.string.isRequired,
+  counter: PropTypes.number.isRequired,
 };
 
 

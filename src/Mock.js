@@ -4,6 +4,9 @@ import RefluxComponent from './reflux/RefluxComponent';
 import RefluxButtons from './reflux/RefluxButtons';
 import ReduxContainer from './redux/ReduxContainer';
 import ReduxButtonsContainer from './redux/ReduxButtonsContainer';
+import CombinedStoreContainer from './combined/CombinedStoreContainer';
+import CombinedButtons from './combined/CombinedButtons';
+import RefluxStore from './reflux/RefluxStore';
 
 const Wrapper = styled.div`
     width: 100%;
@@ -31,9 +34,11 @@ class Mock extends Component {
       <Wrapper>
         <h1>Mock</h1>
         <RefluxComponent />
+        <CombinedStoreContainer tag="Counter" reflux={RefluxStore} options={{ color: '#0984e3', name: 'combined', value: 0 }} />
         <ReduxContainer />
         <ButtonWrapper>
           <RefluxButtons />
+          <CombinedButtons onIncrement={RefluxStore.onIncrement} />
           <ReduxButtonsContainer />
         </ButtonWrapper>
       </Wrapper>

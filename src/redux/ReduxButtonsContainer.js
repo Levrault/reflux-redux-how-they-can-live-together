@@ -46,7 +46,7 @@ ButtonsContainer.propTypes = {
   onReset: PropTypes.func.isRequired,
 };
 
-const ReducButtonsContainer = connect(
+const ReduxButtonsContainer = connect(
   mapStateToProps,
   {
     onIncrement: increment,
@@ -55,4 +55,4 @@ const ReducButtonsContainer = connect(
   },
 )(ButtonsContainer);
 
-export default ReducButtonsContainer;
+export default ReduxButtonsContainer;

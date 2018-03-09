@@ -12,7 +12,7 @@ class RefluxStore extends Store {
     { updatedBy: 'Reflux', counter: 0 }
   )
 
-  onStatusUpdate = (state) => {
+  onSync = (state) => {
     this.setState(state);
   }
 
