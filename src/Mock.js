@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import RefluxComponent from './reflux/RefluxComponent';
-import RefluxButton from './reflux/RefluxButton';
+import RefluxButtons from './reflux/RefluxButtons';
 
 const Wrapper = styled.div`
   width: 600px;
@@ -27,7 +27,7 @@ class Mock extends Component {
         <h1>Mock</h1>
         <RefluxComponent />
         <ButtonWrapper>
-          <RefluxButton />
+          <RefluxButtons />
         </ButtonWrapper>
       </Wrapper>
     );
