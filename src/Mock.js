@@ -6,7 +6,10 @@ import ReduxContainer from './redux/ReduxContainer';
 import ReduxButtonsContainer from './redux/ReduxButtonsContainer';
 
 const Wrapper = styled.div`
-  width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const ButtonWrapper = styled.div`

@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Button from '../common/Button';
+import Title from '../common/Title';
 import { increment, decrement, reset } from './ReduxActions';
 
 const Wrapper = styled.div`
@@ -13,28 +15,7 @@ const ButtonsWrapper = styled.div`
   flex-direction: column;
 `;
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: #00cec9;
-`;
-
-const Button = styled.button`
-  background: transparent;
-  flex:1;
-  color: #00cec9;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #00cec9;
-  border-radius: 3px;
-`;
-
-const mapStateToProps = ({ counter }) => (
-  {
-    counter,
-  }
-);
+const mapStateToProps = ({ counter }) => ({ counter });
 
 const ButtonsContainer = ({
   counter,

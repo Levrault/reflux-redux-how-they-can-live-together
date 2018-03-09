@@ -23,7 +23,6 @@ class RefluxComponent extends Component {
     const { updatedBy, counter } = this.state;
     return (
       <div>
-        <strong>ReduxComponent</strong>
         <Counter color="#db7093" name={updatedBy} value={counter} />
       </div>
     );

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import RefluxActions from './RefluxActions';
+import Button from '../common/Button';
+import Title from '../common/Title';
 
 const Wrapper = styled.div`
   margin: 2em;
@@ -11,34 +13,17 @@ const ButtonsWrapper = styled.div`
   flex-direction: column;
 `;
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: #db7093;
-`;
-
-const Button = styled.button`
-  background: transparent;
-  flex:1;
-  color: #db7093;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #db7093;
-  border-radius: 3px;
-`;
-
 const RefluxButtons = () => (
   <Wrapper>
-    <Title>Reflux Actions</Title>
+    <Title color="#db7093">Reflux Actions</Title>
     <ButtonsWrapper>
-      <Button onClick={() => { RefluxActions.onIncrement(); }}>
+      <Button color="#db7093" onClick={() => { RefluxActions.onIncrement(); }}>
           Increment
       </Button>
-      <Button onClick={() => { RefluxActions.onDecrement(); }}>
+      <Button color="#db7093" onClick={() => { RefluxActions.onDecrement(); }}>
           Decrement
       </Button>
-      <Button onClick={() => { RefluxActions.onReset(); }}>
+      <Button color="#db7093" onClick={() => { RefluxActions.onReset(); }}>
           Reset
       </Button>
     </ButtonsWrapper>
