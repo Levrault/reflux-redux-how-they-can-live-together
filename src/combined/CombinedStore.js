@@ -42,6 +42,7 @@ class CombinedStore extends PureComponent {
         redux: nextRedux,
         source: 'redux',
       });
+      console.log('nextRedux', nextRedux);
       this.props.reflux.onSync(nextRedux);
     }
   }

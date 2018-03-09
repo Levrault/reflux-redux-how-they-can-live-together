@@ -25,10 +25,10 @@ const CombinedButtons = ({
   <Wrapper>
     <Title color="#0984e3">Combined Reflux/Redux Actions</Title>
     <ButtonsWrapper>
-      <Button color="#0984e3" onClick={() => { onIncrement(counter); }}>
+      <Button color="#0984e3" onClick={() => { onIncrement('Reflux', counter); }}>
           Increment with Reflux
       </Button>
-      <Button color="#0984e3" onClick={() => { onDecrement(counter); }}>
+      <Button color="#0984e3" onClick={() => { onDecrement('Redux', counter); }}>
           Decrement with Redux
       </Button>
       <Button color="#0984e3">{'How it\'s working'}</Button>

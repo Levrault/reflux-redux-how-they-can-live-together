@@ -26,13 +26,13 @@ const ButtonsContainer = ({
   <Wrapper>
     <Title>Redux Actions</Title>
     <ButtonsWrapper>
-      <Button onClick={() => { onIncrement(counter); }}>
+      <Button onClick={() => { onIncrement('Redux', counter); }}>
           Increment
       </Button>
-      <Button onClick={() => { onDecrement(counter); }}>
+      <Button onClick={() => { onDecrement('Redux', counter); }}>
           Decrement
       </Button>
-      <Button onClick={() => { onReset(counter); }}>
+      <Button onClick={() => { onReset(); }}>
           Reset
       </Button>
     </ButtonsWrapper>

@@ -8,9 +8,9 @@ const initialState = {
 export default function ReduxReducer(state = initialState, action) {
   switch (action.type) {
     case INCREMENT:
-      return { ...state, counter: action.payload };
+      return { ...state, ...action.payload };
     case DECREMENT:
-      return { ...state, counter: action.payload };
+      return { ...state, ...action.payload };
     case SYNC:
       return { ...state, ...action.payload };
     case RESET:
