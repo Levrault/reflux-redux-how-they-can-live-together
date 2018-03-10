@@ -11,6 +11,7 @@ const Button = styled.button`
   border: 2px solid ${props => (props.color ? props.color : '#00cec9')};
   border-radius: 3px;
   transition: .25s;
+  cursor: pointer;
 
   &:hover {
     background: ${props => (props.color ? props.color : '#00cec9')};
