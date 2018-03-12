@@ -25,7 +25,7 @@ const RefluxButtons = () => (
   <Wrapper>
     <Title color="#db7093">Reflux Actions</Title>
     <ButtonsWrapper>
-      <Button color="#db7093" onClick={() => { RefluxActions.onIncrement(); }}>
+      <Button type="button" color="#db7093" onClick={() => { RefluxActions.onIncrement(); }}>
           Increment
       </Button>
       <Button color="#db7093" onClick={() => { RefluxActions.onDecrement(); }}>
