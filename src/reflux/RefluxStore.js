@@ -8,10 +8,17 @@ class RefluxStore extends Store {
     this.listenables = [RefluxActions]; // listen action
   }
 
+  /**
+   * Return a default state
+   * @returns object
+   */
   getComputedState = () => (
     { updatedBy: 'Reflux', counter: 0 }
   )
 
+  /**
+   * Set a new state
+   */
   onSync = (state) => {
     this.setState(state);
   }
