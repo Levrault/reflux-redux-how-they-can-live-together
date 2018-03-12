@@ -1,41 +1,40 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import logo from './logo.svg';
-import Mock from './Mock';
+import styled from 'styled-components';
+import logo from './avatar.png';
+import Demo from './Demo';
+import Article from './text/Article';
 
 const Wrapper = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Header = styled.header`
-  background-color: #222;
-  height: 80px;
-  padding: 20px;
-  color: white;
-`;
-
-const rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  height: 100%;
+  padding: 32px;
+  text-align: center;
+  background: #2c3e50;
+  color: #fff;
 `;
 
 const Logo = styled.img`
-  animation: ${rotate360} infinite 20s linear;
-  height: 80px;
+  height: 200px;
+  border-radius: 100%;
 `;
 
 const App = () => (
-  <Wrapper>
+  <div>
     <Header>
       <Logo src={logo} alt="logo" />
+      <h1>Reflux & Redux: How they can live together</h1>
     </Header>
-    <Mock />
-  </Wrapper>
+    <Wrapper>
+      <Article />
+      <Demo />
+    </Wrapper>
+  </div>
 );
 
 App.propTypes = {};
