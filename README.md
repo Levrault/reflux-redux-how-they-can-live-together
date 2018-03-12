@@ -15,3 +15,5 @@ I create a combinedStore component that will help you sync data between a Redux 
 CombinedStore use callback to call Reflux Actions on state change et Redux Actions on props change.
 
 It's a temporary solution since you will get rid of Reflux at the end.
+
+I made a demo accessible at [this page](https://guitarlove.github.io/reflux-redux-how-they-can-live-together/)
