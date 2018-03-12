@@ -29,7 +29,7 @@ class RefluxComponent extends PureComponent {
     const { updatedBy, counter } = this.state;
     return (
       <div>
-        <Counter color="#db7093" updatedBy={updatedBy} counter={counter} />
+        <Counter updatedBy={updatedBy} counter={counter} />
       </div>
     );
   }

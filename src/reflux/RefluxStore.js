@@ -56,7 +56,7 @@ class RefluxStore extends Store {
    * @return {object}
    */
   onReset = () => {
-    this.setState({ counter: 0 });
+    this.setState(this.getComputedState());
   }
 }
 

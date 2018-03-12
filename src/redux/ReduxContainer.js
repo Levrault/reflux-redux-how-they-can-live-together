@@ -18,7 +18,7 @@ const mapStateToProps = ({ updatedBy, counter }) => (
  */
 const Container = ({ updatedBy, counter }) => (
   <div>
-    <Counter color="#00cec9" updatedBy={updatedBy} counter={counter} />
+    <Counter updatedBy={updatedBy} counter={counter} />
   </div>
 );
 

@@ -31,7 +31,6 @@ const CombinedButtons = ({
       <Button color="#0984e3" onClick={() => { onDecrement('Redux', counter); }}>
           Decrement with Redux
       </Button>
-      <Button color="#0984e3">{'How it\'s working'}</Button>
     </ButtonsWrapper>
   </Wrapper>
 );

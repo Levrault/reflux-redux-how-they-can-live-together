@@ -33,9 +33,7 @@ class Mock extends Component {
     return (
       <Wrapper>
         <h1>Mock</h1>
-        <RefluxComponent />
-        <CombinedStoreContainer tag="Counter" reflux={RefluxStore} options={{ color: '#0984e3', name: 'combined', value: 0 }} />
-        <ReduxContainer />
+        <CombinedStoreContainer tag="Counter" reflux={RefluxStore} options={{ name: 'combined', value: 0 }} />
         <ButtonWrapper>
           <RefluxButtons />
           <CombinedButtons onIncrement={RefluxStore.onIncrement} />

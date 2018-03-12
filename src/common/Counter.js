@@ -10,31 +10,40 @@ const Wrapper = styled.div`
 `;
 
 const Name = styled.span`
-  font-weight: 700;
+  font-size:2rem;
   margin-right: 8px;
   color: ${props => props.color}
 `;
 
 const Value = styled.span`
+  font-size:2rem;
   color: #0984e3;
+  font-weight: 700;
 `;
+
+const getColors = (updatedBy) => {
+  switch (updatedBy) {
+    case 'Reflux':
+      return '#db7093';
+    default:
+      return '#00cec9';
+  }
+};
 
 /**
  * Simple counter
  *
- * @param {string} color
  * @param {string} updatedBy which store has send the counter value
  * @param {number} counter
  */
-const Counter = ({ color, updatedBy, counter }) => (
+const Counter = ({ updatedBy, counter }) => (
   <Wrapper>
-    <Name color={color}>{updatedBy}</Name>
+    <Name color={getColors(updatedBy)}>{`Updated by ${updatedBy}`}</Name>
     <Value>{counter}</Value>
   </Wrapper>
 );
 
 Counter.propTypes = {
-  color: PropTypes.string.isRequired,
   updatedBy: PropTypes.string.isRequired,
   counter: PropTypes.number.isRequired,
 };
