@@ -9,11 +9,11 @@ import RefluxStore from './reflux/RefluxStore';
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const Wrapper = styled.div`
-  border: 1px solid #000000d6;
-  border-radius: 8px;
+  border-top: 1px solid #000000d6;
   margin-bottom: 32px;
 `;
 

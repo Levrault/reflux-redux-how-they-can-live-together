@@ -1,26 +1,38 @@
 import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/styles/hljs';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
   color: #000000d6;
   margin: 32px 0;
-  max-width:740px;
-  font-size: 21px;
+  max-width: 740px;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media(max-width: 762px) {
+    margin: 16px 0;
+  }
 `;
 
 const Paragraphe = styled.p`
   text-align: left;
-`;
 
-const Code = styled.pre`
-  background-color: #0000000d;
-  padding: 8px;
-  font-size: 16px;
+  @media(max-width: 762px) {
+    padding: 0 16px;
+    text-align: justify;
+  }
 `;
 
 const Title = styled.h2`
   font-weight: 600;
-  font-size: 34px;
+  font-size: 1.6rem;
+
+  @media(max-width: 762px) {
+    padding: 0 16px;
+  }
 `;
 /**
  * Dump pure text component
@@ -82,37 +94,44 @@ const Article = () => (
       and the current data. If a Reflux Store is used, he will update the internal store with my
       onUpdate function. When this function is called, I simple use my Redux sync function to
       set the new Redux store data.
+    </Paragraphe>
 
-      <Code>{`
+    <SyntaxHighlighter language="javascript" style={docco}>{`
 /**
- * Reflux store listener, is called when
- * reflux store is udpdated
+ * Reflux store listener, is called 
+ * when reflux store is udpdated
  *
- * reduxSync function is call to sync the redux store with
+ * reduxSync function is call to sync 
+ * the redux store with 
  * the data of the reflux store
  *
  * @param  {object} reflux
  */
 onUpdate = (reflux) => {
-  this.setState({ reflux, source: 'reflux' });
+  this.setState({ 
+    reflux, 
+    source: 'reflux' 
+  });
 
   // sync redux store
   this.props.reduxSync(reflux);
 }
       `}
-      </Code>
-    </Paragraphe>
+    </SyntaxHighlighter>
 
     <Paragraphe>
       For the Redux part, I set my internal state in the componentWillReceiveProps function.
       Like in my Reflux solution, I set my callback just after updating my internal state.
-      <Code>{`
+    </Paragraphe>
+    <SyntaxHighlighter language="javascript" style={docco}>{`
 /**
- * Since Redux update his data by updating props,
- * I use the componentWillReceiveProps to update the
- * redux value
- * When redux value can be updtated, I sync the new
- * data with the reflux store
+ * Since Redux update his 
+ * data by updating props,
+ * I use the componentWillReceiveProps 
+ * to update the redux value
+ * When redux value can be updtated, 
+ * I sync the new data with the reflux 
+ * store
  * @param  {object} nextProps
  */
 componentWillReceiveProps(nextProps) {
@@ -131,8 +150,7 @@ componentWillReceiveProps(nextProps) {
   }
 }
     `}
-      </Code>
-    </Paragraphe>
+    </SyntaxHighlighter>
 
     <Paragraphe>
       That pretty much all. You can test my live demo just below.

@@ -22,6 +22,7 @@ const Header = styled.header`
 const Logo = styled.img`
   height: 200px;
   border-radius: 100%;
+  border: 2px solid #FFF;
 `;
 
 const App = () => (
@@ -29,6 +30,7 @@ const App = () => (
     <Header>
       <Logo src={logo} alt="logo" />
       <h1>Reflux & Redux: How they can live together</h1>
+      <h2>By Luc-Frédéric Langis</h2>
     </Header>
     <Wrapper>
       <Article />

@@ -21,6 +21,7 @@
     "react-redux": "^5.0.7",
     "react-reflux": "^1.2.2",
     "react-scripts": "1.1.1",
+    "react-syntax-highlighter": "^7.0.2",
     "react-test-renderer": "^16.2.0",
     "redux": "^3.7.2",
     "reflux": "^6.4.1",
