@@ -4,23 +4,24 @@ Reflux is a simple library for unidirectional dataflow architecture and Redux is
 
 But what happen when you have an old Reflux app and you need to migrate it to Redux ?
 
-You got two options, the first one, you start from scratch with Redux. Simple but quite efficient. The second option, you migrate component by component to Redux while maintaining the old one until you can update them.
+You got two options, the first one, you start from scratch with Redux. Simple but quite efficient. The second option, you migrate component by component to Redux while maintaining the old ones until you can update them.
 
-This solution can be a lot a trouble since you will encounter the inevitable scenario case when a Redux component will need to exchange data with a Reflux component (or vice versa).
+
+This solution can be a lot of troubles since you will encounter the inevitable case scenario when a Redux component will need to exchange data with a Reflux component (or vice versa).
 
 ## My Solution
 
-To ensure that your old Reflux component can live in armony with your brave but quit young Redux component, you will need a temporary solution. Why a temporary one ? Since you will, at some day, migrate all your reflux component, you will delete the solution.
+To ensure that your old Reflux component can live in armony with your brave but quite young Redux component, you will need a temporary solution. Why a temporary one ? Since you will, in the future, migrate all your reflux component, you will delete the solution.
 
-So I create a solution and I call it a CombinedStore Component. His role ? Receive reflux and redux store date and sync them. That all.
+So I created a solution and I called it a CombinedStore Component. It role ? Receive reflux and redux store data and sync them. That's all.
 
-For this demo, a made a simple counter. He can be updated by a Reflux Store and Redux store. When the value is updated, I sync it on both store.
+For this demo, I made a simple counter. It can be updated by a Reflux Store and Redux store. When the value is updated, I sync it on both stores.
 
 ## How I do it ?
 
-By creating internal state and two callback: one for Redux and one for Reflux.
+By creating internal state and two callbacks: one for Redux and one for Reflux.
 
-My internal state will be use to keep track of the lastest updated store (Redux or Reflux) and the current data. If a Reflux Store is used, he will update the internal store with my onUpdate function. When this function is called, I simple use my Redux sync function to set the new Redux store data.
+My internal state will be use to keep track of the lastest updated store (Redux or Reflux) and the current data. If a Reflux Store function is called, it will update the internal state with my onUpdate function. When this function is called, I simply use my Redux sync function to set the new Redux store data.
 
 ```javascript
 /**
@@ -40,7 +41,7 @@ onUpdate = (reflux) => {
 }
 ```
 
-For the Redux part, I set my internal state in the componentWillReceiveProps function. Like in my Reflux solution, I set my callback just after updating my internal state.
+For the Redux part, I set my internal state in the componentWillReceiveProps function. Like in my Reflux solution, I set my callback just after updating the CombinedStore component's state.
 
 ```javascript
 /**
@@ -70,4 +71,4 @@ componentWillReceiveProps(nextProps) {
 
 
 
-That pretty much all. I made a demo accessible at [this page](https://guitarlove.github.io/reflux-redux-how-they-can-live-together/)
+That's pretty much all. I made a demo accessible at [this page](https://guitarlove.github.io/reflux-redux-how-they-can-live-together/)

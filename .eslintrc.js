@@ -20,7 +20,9 @@ module.exports = {
     // We use development dependencies (as react-test-renderer) in unit tests
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.spec.js"]}],
     // We can't guess what our object contains
-    "react/forbid-prop-types": [0, { "forbid": ["object"] }]
+    "react/forbid-prop-types": [0, { "forbid": ["object"] }],
+    // enable quote in html
+    "react/no-unescaped-entities": false
   },
   "globals": {
     // Following are symbols from testing libraries
